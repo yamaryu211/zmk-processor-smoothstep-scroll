@@ -1,4 +1,6 @@
 name: zmk-processor-smoothstep-scroll
+description: "ZMK用Smoothstepスクロール軸スナップ入力プロセッサー"
 build:
   cmake: .
   kconfig: Kconfig
+  zephyr-extra-module-dependencies: []
