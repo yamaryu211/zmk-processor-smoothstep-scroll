@@ -3,4 +3,5 @@ description: "Smoothstep method for axis snapping scroll implementation for ZMK"
 build:
   cmake: .
   kconfig: Kconfig
-  zephyr-extra-module-dependencies: []
+  zephyr-extra-module-dependencies:
+    - zmk
