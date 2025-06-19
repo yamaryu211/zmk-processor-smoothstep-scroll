@@ -5,6 +5,5 @@ description: |
 build:
   cmake: .
   kconfig: Kconfig
-  settings:
-    zephyr-extra-module-dependencies:
-      - zmk
+  zephyr-extra-module-dependencies:
+    - zmk
