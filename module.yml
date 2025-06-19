@@ -1,0 +1,4 @@
+name: zmk-processor-smoothstep-scroll
+build:
+  cmake: .
+  kconfig: Kconfig

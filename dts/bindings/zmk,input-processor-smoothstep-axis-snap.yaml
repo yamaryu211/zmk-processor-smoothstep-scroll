@@ -1,0 +1,25 @@
+# Copyright (c) 2025 yamaryu211
+# SPDX-License-Identifier: MIT
+
+description: Smoothstep軸スナップ入力プロセッサー - スクロール専用
+
+compatible: "zmk,input-processor-smoothstep-axis-snap"
+
+include: input-processor.yaml
+
+properties:
+  threshold-start:
+    type: int
+    default: 150
+    description: |
+      軸スナップの開始閾値。
+      軸比率がこの値以下だと完全にスナップし、この値から終了閾値までの範囲で
+      滑らかに遷移します。単位は1000分率で、150は15%を意味します。
+
+  threshold-end:
+    type: int
+    default: 350
+    description: |
+      軸スナップの終了閾値。
+      軸比率がこの値以上だと全く減衰せず、開始閾値からこの値までの範囲で
+      滑らかに遷移します。単位は1000分率で、350は35%を意味します。

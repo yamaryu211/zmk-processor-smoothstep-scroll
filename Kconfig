@@ -1,0 +1,29 @@
+# ZMK Smoothstepスクロール軸スナップ設定
+
+config ZMK_INPUT_PROCESSOR_SMOOTHSTEP_AXIS_SNAP
+    bool "Smoothstep方式のスクロール軸スナップ処理"
+    default n
+    depends on ZMK_POINTING
+    help
+      スクロールの動きをSmoothstep方式で滑らかに軸方向にスナップする
+      入力プロセッサーを有効にします。
+
+if ZMK_INPUT_PROCESSOR_SMOOTHSTEP_AXIS_SNAP
+
+config ZMK_INPUT_PROCESSOR_SMOOTHSTEP_AXIS_SNAP_DEFAULT_THRESHOLD_START
+    int "軸スナップ開始閾値"
+    default 150
+    range 50 300
+    help
+      軸比率がこの値以下だと完全にスナップし、この値から終了閾値までの範囲で
+      滑らかに遷移します。単位は1000分率で、150は15%を意味します。
+
+config ZMK_INPUT_PROCESSOR_SMOOTHSTEP_AXIS_SNAP_DEFAULT_THRESHOLD_END
+    int "軸スナップ終了閾値"
+    default 350
+    range 200 500
+    help
+      軸比率がこの値以上だと全く減衰せず、開始閾値からこの値までの範囲で
+      滑らかに遷移します。単位は1000分率で、350は35%を意味します。
+
+endif # ZMK_INPUT_PROCESSOR_SMOOTHSTEP_AXIS_SNAP
