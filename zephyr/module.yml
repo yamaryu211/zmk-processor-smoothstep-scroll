@@ -1,9 +1,6 @@
 name: zmk-processor-smoothstep-scroll
-description: |
-  Smoothstep method for axis snapping scroll implementation for ZMK
-  滑らかな遷移関数を使ったスクロール軸スナップ実装
+description: "Smoothstep method for axis snapping scroll implementation for ZMK"
 build:
   cmake: .
   kconfig: Kconfig
-  zephyr-extra-module-dependencies:
-    - zmk
+  zephyr-extra-module-dependencies: []
